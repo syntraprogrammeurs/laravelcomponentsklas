@@ -1,0 +1,25 @@
+<!doctype html class="h-full bg-white">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ $title ?? 'Dashboard' }}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-full">
+<div>    <!-- Off-canvas menu for mobile, show/hide based on off-canvas menu state. -->
+    <x-backend.sidebar></x-backend.sidebar>
+    <div class="lg:pl-72">
+        <x-backend.topbar></x-backend.topbar>
+        <main class="py-10">
+            <x-backend.header title="{{ $title ?? 'Dashboard Overzicht' }}"></x-backend.header>
+            <div class="px-4 sm:px-6 lg:px-8">
+                {{$slot}}
+            </div>
+        </main>
+    </div>
+</div>
+</body>
+</html>
