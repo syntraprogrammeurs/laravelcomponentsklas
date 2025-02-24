@@ -14,7 +14,7 @@
     <div class="lg:pl-72">
         <x-backend.topbar></x-backend.topbar>
         <main class="py-10">
-{{--            <x-backend.header title="{{ $title ?? 'Dashboard Overzicht' }}"></x-backend.header>--}}
+            <x-backend.header title="{{ $title ?? 'Dashboard Overzicht' }}"></x-backend.header>
             <div class="px-4 sm:px-6 lg:px-8">
                 {{$slot}}
             </div>

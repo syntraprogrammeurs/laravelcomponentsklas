@@ -172,6 +172,7 @@ class UserController extends Controller
     public
     function destroy(User $user)
     {
+
         //delete van een user
         //$user = User::with('photo')->findOrFail($id);
 
@@ -183,7 +184,7 @@ class UserController extends Controller
         //$user->photo->delete();
         $user->delete();
         //redirect naar users
-        return redirect()->route('users.index')->with('message', 'User deleted successfully!');
+        return redirect()->route('users.index')->with('success', 'User deleted successfully!');
     }
 
     public function restore(string $id){
